@@ -38,4 +38,3 @@ Funcionalidades:
 Terminar de configurar cors y sessions. (cuando tenga el front)
 
 
-prueba.
