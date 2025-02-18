@@ -1,5 +1,5 @@
 const Venta = require('../models/venta')
-const Detalle = require('../models/detalleVenta')
+
 const sequelize = require('sequelize')
 
 const getVentaById = async(req, res) => {

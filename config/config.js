@@ -1,8 +1,10 @@
 require('dotenv').config()
 module.exports = {
-    username: process.env.DB_USERNAME || 'postgres',  // Usa variable de entorno o un valor por defecto
-    password: process.env.DB_PASSWORD || '123',      // Lo mismo para la contraseña
-    database: process.env.DB_NAME || 'db',   // Nombre de la base de datos
-    host: process.env.DB_HOST || 'localhost',                  // Dirección del servidor de la base de datos
-    dialect: 'postgres'
+    username: process.env.DB_USERNAME || 'franpostgres',  
+    password: process.env.DB_PASSWORD || '123',      
+    database: process.env.DB_NAME || 'lablanquita',   
+    host: process.env.DB_HOST || 'localhost',         
+    dialect: 'postgres',
+    db_url:process.env.DB_URL || 'postgres://franpostgres:123@localhost:5432/lablanquita'
+
 }

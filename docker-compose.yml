@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: franpostgres        
+      POSTGRES_PASSWORD: '123'          
+      POSTGRES_DB: lablanquita  
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres-data:
+    driver: local
+

@@ -1,26 +1,27 @@
 const { Model, DataTypes } = require('sequelize')
-const { sequelize } = require('./index')
-
+const { sequelize } = require('../../config/database')
+const Producto = require('./producto')
+const Venta = require('./venta')
 class DetalleVenta extends Model {}
 
 DetalleVenta.init({
     id_venta: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'Ventas',  
-          key: 'id',
+        model: 'Venta',  
+        key: 'id',
         },
         allowNull: false,  
-      },
-      id_producto: {
+    },
+    id_producto: {
         type: DataTypes.INTEGER,
         references: {
-          model: 'Productos',  
-          key: 'id',
+        model: 'Productos',  
+        key: 'id',
         },
         allowNull: false,  
-      },
-      cantidad: {
+    },
+    cantidad: {
         type: DataTypes.INTEGER,
         allowNull: false,
         defaultValue: 1
@@ -29,7 +30,7 @@ DetalleVenta.init({
     sequelize,
     modelName: 'DetalleVenta',
     tableName: 'detalle_venta'
-  }
+}
 );
 
 module.exports = DetalleVenta;
