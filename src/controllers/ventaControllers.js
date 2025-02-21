@@ -35,7 +35,22 @@ const crearVenta = async (req,res) =>{
     }
 }
 
+const eliminarVenta = async (req,res) =>{
+    const id = req.params.id
+    try {
+        const venta = Venta.findByPk(id)
+
+        if(!venta){return res.status(404).json({message:`No se encontró la venta de id ${id}.`})}
+
+        await Venta.destroy({where:{id_venta:id}})
+        return res.status(200).json({message:`Venta ${id} eliminada`})
+    } catch (error) {
+        return res.status(500).json({message:`Error al eliminar venta. ${error.message}`})
+    }    
+}
+
 module.exports = {
     getVentaById,
-    crearVenta
+    crearVenta,
+    eliminarVenta
 }

@@ -1,7 +1,8 @@
 const { Router } = require('express') 
 const detalleControllers = require('../controllers/detalleControllers')
 const router = Router()
+const auth = require('../middleware/session')
 
-router.post('/', detalleControllers.agregarProducto)
+router.post('/',auth,  detalleControllers.agregarProducto)
 
 module.exports = router

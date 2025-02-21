@@ -44,12 +44,11 @@ const eliminarProducto = async(req,res) =>{
     try {
         const producto = await Producto.findByPk(id)
         if(!producto){return res.status(404).json({message:'Producto no encontrado'})}
-        const productoEliminado = await Producto.destroy({
-            where:{id:id}
-        })
+        await Producto.destroy({where:{id:id}}
+        )
         return res.status(200).json({message:`Producto '${producto.nombre}' eliminado con exito`})
     } catch (error) {
-        
+        return res.status(500).json({message:`Error al eliminar producto. ${error.message}`})       
     }
 }
 

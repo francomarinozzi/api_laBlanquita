@@ -1,9 +1,9 @@
 const {Router} = require('express')
 const ventaControllers = require('../controllers/ventaControllers')
-
+const auth = require('../middleware/session')
 const router = Router()
 
-router.get('/:id', ventaControllers.getVentaById)
-router.post('/',ventaControllers.crearVenta)
-
+router.get('/:id',auth, ventaControllers.getVentaById)
+router.post('/',auth, ventaControllers.crearVenta)
+router.delete('/:id', auth, ventaControllers.eliminarVenta)
 module.exports = router
