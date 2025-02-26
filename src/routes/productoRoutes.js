@@ -10,4 +10,5 @@ router.post('/', auth, productoControllers.crearProducto)
 router.patch('/:id', auth, productoControllers.modificarPrecio)
 
 router.delete('/:id', auth, productoControllers.eliminarProducto)
+
 module.exports = router

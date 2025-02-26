@@ -17,7 +17,7 @@ const crearProducto = async(req,res)=>{
     const producto = req.body
     try { 
         const nuevoProducto = await Producto.create(producto)
-        return res.status(200).json({message:`Producto '${producto.nombre}' creado con éxito.`, paciente:nuevoProducto.toJSON()})
+        return res.status(200).json({message:`Producto '${producto.nombre}' creado con éxito.`, producto:nuevoProducto.toJSON()})
     } catch (error) {
         return res.status(500).json({message:`Error al crear producto.${error.message}`})
     }
@@ -33,7 +33,7 @@ const modificarPrecio = async(req,res) =>{
             { precio: precio },
             {where: {id:id}}
         )
-        return res.status(200).json(`Nuevo precio de '${producto.nombre}': ${precio}`)
+        return res.status(200).json(`Nuevo precio de '${producto.nombre}': ${producto.precio}`)
     } catch (error) {
         return res.status(500).json({error:'Error al actualizar el precio', details:error.message})
     }

@@ -26,7 +26,8 @@ const crearVenta = async (req,res) =>{
     try{
         const nuevaVenta = await Venta.create({
             ...req.body,
-            fecha_hora:sequelize.fn('NOW')
+            fecha_hora:sequelize.fn('NOW'),
+            id_pedido
         })
         return res.status(200).json(nuevaVenta)
     }

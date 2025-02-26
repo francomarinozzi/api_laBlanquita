@@ -21,7 +21,7 @@ DetalleVenta.belongsTo(Producto, { foreignKey: 'id_producto' });
 const connectToDb = async()=>{
     try {
         
-        await sequelize.sync({force:true})
+        await sequelize.sync({force:false})
         
         await sequelize.authenticate()  
         

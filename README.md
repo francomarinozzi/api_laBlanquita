@@ -37,4 +37,7 @@ Funcionalidades:
 
 Terminar de configurar cors y sessions. (cuando tenga el front)
 
-
+**AGREGAR VALIDACIONES (JOI)
+**AGREGAR REDIS
+**Agregar documentacion (swagger)
+**Corregir ventas(como crearlas? a base del detalle)
