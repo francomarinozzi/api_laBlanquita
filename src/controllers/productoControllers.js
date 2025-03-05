@@ -1,5 +1,5 @@
-
 const Producto = require("../models/producto")
+
 
 
 const getProductos = async (req,res) => {
@@ -52,9 +52,21 @@ const eliminarProducto = async(req,res) =>{
     }
 }
 
+const getProductoById = async(req,res) =>{
+    try {
+        const producto = await Producto.findByPk(req.params.id)
+        if(!producto){return res.status(404).json({message:`Producto no encontrado`})}
+        return res.status(200).json(producto)
+    } catch (error) {
+        return res.status(500).json({message:`Error al consultar producto: ${error.message}`})
+    }
+}
+
+
 module.exports = {
     getProductos,
     crearProducto,
     modificarPrecio,
-    eliminarProducto
+    eliminarProducto,
+    getProductoById
 }

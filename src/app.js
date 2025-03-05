@@ -11,8 +11,8 @@ const session = require('express-session')
 
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',  // Permite cualquier origen, solo el dominio, no el archivo específico
-    credentials: true,  // Permite el envío de cookies y credenciales
+    origin: 'http://localhost:5173',  
+    credentials: true,  
   }));
   
 app.use(session({
