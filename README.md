@@ -18,3 +18,8 @@ API para registro de ventas y pedidos en una fábrica de pastas. Permite registr
 - Generacion de QR con APi Mercadopago.
 - Validaciones(JOI).
 - UI(en desarrollo).
+
+Aclaración:
+La app está configurada para levantar la BD desde un contenedor de docker con docker-compose, y
+la app desde localhost.
+Recien vez que la app esté 'finalizada' voy a crear la imágen de esta para poder usarla solo con Docker. 
