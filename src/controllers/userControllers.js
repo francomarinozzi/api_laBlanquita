@@ -61,8 +61,8 @@ const logout = async(req,res) =>{
             return res.status(500).json({message:`Error al cerrar sesion`})
         }
         res.clearCookie('connect.sid');
+        return res.status(200).json({message:`Sesion cerrada`})
     })
-    return res.status(200).json({message:`Sesion cerrada`})
 }
 
 module.exports = {
