@@ -1,19 +1,24 @@
+# 📌 API - Fábrica de Pastas 'la blanquita' ***(En desarrollo)***
 
-Endpoints *PRODUCTO*
+## 📝 Descripción
+API para registro de ventas y pedidos en una fábrica de pastas. Permite registrar y administrar pedidos tanto para **delivery** como para **mostrador**.
 
-| METHOD      | Endpoint     |Descripcion                       |    
-|----------   |---------     |----------                        |
-| GET         | /productos   |Muestra  todos los productos      |
-| POST        | /productos   | crea un producto                 |
-| PATCH       | /productos/id| modifica el precio de un producto|
-| DELETE      | /productos/id| elimina un producto              |
+## 🚀 Características principales
+- 📦 **Gestión de pedidos:** Registro de pedidos para delivery y mostrador.
+- 💰 **Control de ventas:** Registro de ventas realizadas. Monto total, detalle y método de pago.
 
-
-
-Endpoints *Detalle_venta*
-
-| METHOD      | Endpoint      |Descripcion                                |    
-|----------   |---------      |----------                                 |
-| POST        | /detalle      |Agrega un producto a una venta             |
+## 🏗️ Tecnologías utilizadas
+- **Backend:** Node.js - Express - Sequelize
+- **Base de datos:** PostgreSQL
 
 
+## 📌 Próximas mejoras
+- Implementar autenticación con JWT.
+- Generacion de QR con APi Mercadopago.
+- Validaciones(JOI).
+- UI(en desarrollo).
+
+Aclaración:
+La app está configurada para levantar la BD desde un contenedor de docker con docker-compose, y
+la app desde localhost.
+Recien vez que la app esté 'finalizada' voy a crear la imágen de esta para poder usarla solo con Docker. 
