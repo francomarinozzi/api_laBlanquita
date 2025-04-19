@@ -1,3 +1,5 @@
+
+## 🚧 Este proyecto está _pausado_ (por cuestiones académicas) 😅
 # 📌 API - Fábrica de Pastas 'la blanquita' ***(En desarrollo)***
 
 ## 📝 Descripción
