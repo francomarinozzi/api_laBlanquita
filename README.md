@@ -1,4 +1,18 @@
 
+# ⚠️ DEPRECADO
+
+![Status](https://img.shields.io/badge/status-deprecated-red)
+
+> **Esta API ya no está en desarrollo.**  
+> Reemplazada por: https://github.com/francomarinozzi/api_lablanquita_SpringBoot.  
+
+
+<br>
+<br>
+<br>
+
+
+
 ## 🚧 Este proyecto está _pausado_ (por cuestiones académicas) 😅
 # 📌 API - Fábrica de Pastas 'la blanquita' ***(En desarrollo)***
 
